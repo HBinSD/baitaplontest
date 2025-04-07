@@ -285,6 +285,17 @@ body {
     }
 }
 
+@media (max-width: 1025px) {
+    .overlay{
+        background-color: rgba(0, 0, 0, 0.2);
+        align-content: end;
+    }
+    
+    .overlay, .overlay h3, .overlay p {
+        opacity: 1;
+    }
+}
+
 /* === Cuisine Section === */
 .cuisine {
     padding: 50px 15px;
@@ -439,9 +450,9 @@ body {
 }
 
 /* Responsive Tours */
-@media (max-width: 350px) {
+@media (max-width: 789px) {
     .tour-card-footer { flex-direction: column; align-items: flex-start; gap: 10px; }
-    .tour-card-button { width: 100%; text-align: center; }
+    .tour-card-button { width: 90%; text-align: center; }
 }
 
 /* === Footer === */
