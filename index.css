@@ -9,9 +9,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 24px 30px;
+    padding: 12px 30px;
     background-color: #fff;
     font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Thêm bóng đổ nhẹ cho header */
 }
 
@@ -41,7 +42,7 @@ body {
     text-decoration: none;
     color: #000;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     /* Animation cho link nav */
     transition: color 0.3s ease, transform 0.2s ease;
     cursor: pointer; /* Con trỏ chuột */
@@ -53,29 +54,15 @@ body {
 }
 
 .nav-links i {
-    font-size: 18px;
+    font-size: 16px;
     /* Animation cho icon nav (nếu có thể click riêng) */
     transition: color 0.3s ease, transform 0.2s ease;
     cursor: pointer; /* Con trỏ chuột */
     display: inline-block; /* Cần cho transform */
 }
 .nav-links i:hover {
-    color: #007bff;
-    transform: scale(1.1) translateY(-1px); /* Phóng to và nhấc lên nhẹ */
-}
-
-@media screen and (max-width: 430px) {
-    .main-header {
-        padding: 15px 20px;
-    }
-    .left-section a {
-        font-size: 18px;
-    }
-
-    .nav-scroll-item {
-        font-size: 12px;
-    }
-    
+     color: #007bff;
+     transform: scale(1.1) translateY(-1px); /* Phóng to và nhấc lên nhẹ */
 }
 
 /* === Hero Section === */
@@ -83,6 +70,7 @@ body {
     background: url('public/image/cauthehuc.png') no-repeat center center/cover;
     color: white;
     position: relative;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -93,7 +81,6 @@ body {
 
 .title-container {
     text-align: left;
-    /* Animation nhẹ cho tiêu đề khi load (ví dụ) */
     animation: fadeInDown 1s ease-out;
 }
 
@@ -101,8 +88,7 @@ body {
     text-align: left;
     max-width: 1200px;
     align-self: flex-start;
-     /* Animation nhẹ cho mô tả khi load */
-    animation: fadeInUp 1s ease-out 0.3s;
+    animation: fadeInUp 1s ease-out 0.3s; /* Delay nhẹ */
     animation-fill-mode: backwards; /* Giữ trạng thái đầu trước khi bắt đầu */
 }
 
@@ -122,7 +108,7 @@ body {
 }
 
 .hero .title-container p {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: lighter;
     opacity: 0.9;
 }
@@ -130,23 +116,6 @@ body {
 .description p {
     font-size: 24px;
     line-height: 1.6;
-}
-
-@media screen and (max-width: 768px) {
-    .hero {
-        min-height: 500px;
-        padding: 20px 15px;
-    }
-    .hero h1 {
-        font-size: 36px;
-    }
-    .hero .title-container p {
-        font-size: 24px;
-    }
-    .description p {
-        font-size: 16px;
-    }
-    
 }
 
 /* === Destinations Section === */
@@ -172,7 +141,9 @@ body {
     align-items: flex-start;
 }
 
-.grid-container > div { /* Áp dụng cho các .place... */
+
+
+.grid-container > a { /* Áp dụng cho các .place... */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -185,14 +156,14 @@ body {
     cursor: pointer; /* Con trỏ chuột */
     /* Animation cho thẻ địa điểm */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
 }
-.grid-container > div:hover {
-    transform: translateY(-5px); /* Nhấc lên nhẹ */
+.grid-container > a:hover {
+    transform: translateY(-6px); /* Nhấc lên khi hover */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25); /* Bóng đổ đậm hơn khi hover */
 }
-
-.grid-container > div:hover .overlay { /* Làm overlay rõ hơn khi hover */
-    background-color: rgba(0, 0, 0, 0.2);
-    opacity: 1;
+.grid-container > a:hover .overlay { 
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 
@@ -204,12 +175,11 @@ body {
 /* Overlay */
 .overlay {
     padding: 12px;
-    width: 100%;
     height: 100%;
+    width: 100%;
     box-sizing: border-box;
-    transition: background-color 0.4s ease; /* Hiệu ứng chuyển màu nền */
+    transition: background-color 0.3s ease;
     align-content: end;
-    opacity: 0;
 }
 
 .overlay h3 {
@@ -217,15 +187,22 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     text-transform: uppercase;
-    line-height: 1.2; 
+    line-height: 1.2;
+    opacity: 0;
 }
 
 .overlay p {
     margin: 0;
-    font-size: 1em;
+    font-size: 0.85em;
     line-height: 1.3;
+    opacity: 0;
 }
 
+.overlay:hover h3,
+.overlay:hover p {
+    opacity: 1;
+    animation: fadeInUp 0.3s ease-out; /* Animation nhẹ khi hover */
+}
 
 /* Responsive Destinations */
 @media (max-width: 768px) {
@@ -287,6 +264,7 @@ body {
     cursor: pointer; /* Con trỏ chuột */
     /* Animation cho thẻ món ăn */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
 }
 .cuisine-item:hover {
     transform: translateY(-6px); /* Nhấc lên */
@@ -369,7 +347,7 @@ body {
     height: 100%;
     object-fit: cover;
     /* Animation phóng to ảnh */
-    transition: transform 0.4s ease;
+     transition: transform 0.4s ease;
 }
 
 .tour-card-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
@@ -506,6 +484,5 @@ body {
 }
   
   .nav-scroll-item:hover {
-    color: #007bff; /* Ví dụ đổi màu khi hover */
+     color: #007bff; /* Ví dụ đổi màu khi hover */
 }
-
