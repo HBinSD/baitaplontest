@@ -1,0 +1,511 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+/* === Header === */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 30px;
+    background-color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Thêm bóng đổ nhẹ cho header */
+}
+
+.left-section a {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    margin-right: 20px;
+    white-space: nowrap;
+    /* Animation cho link header */
+    transition: color 0.3s ease, transform 0.2s ease;
+    cursor: pointer; /* Con trỏ chuột */
+    display: inline-block; /* Cần cho transform */
+}
+.left-section a:hover {
+    color: #007bff; /* Màu khi hover */
+    transform: translateY(-2px); /* Hiệu ứng nhấc lên nhẹ */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    /* Animation cho link nav */
+    transition: color 0.3s ease, transform 0.2s ease;
+    cursor: pointer; /* Con trỏ chuột */
+    display: inline-block; /* Cần cho transform */
+}
+.nav-links a:hover {
+    color: #007bff;
+    transform: translateY(-2px);
+}
+
+.nav-links i {
+    font-size: 18px;
+    /* Animation cho icon nav (nếu có thể click riêng) */
+    transition: color 0.3s ease, transform 0.2s ease;
+    cursor: pointer; /* Con trỏ chuột */
+    display: inline-block; /* Cần cho transform */
+}
+.nav-links i:hover {
+    color: #007bff;
+    transform: scale(1.1) translateY(-1px); /* Phóng to và nhấc lên nhẹ */
+}
+
+@media screen and (max-width: 430px) {
+    .main-header {
+        padding: 15px 20px;
+    }
+    .left-section a {
+        font-size: 18px;
+    }
+
+    .nav-scroll-item {
+        font-size: 12px;
+    }
+    
+}
+
+/* === Hero Section === */
+.hero {
+    background: url('public/image/cauthehuc.png') no-repeat center center/cover;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 700px;
+    padding: 40px 30px;
+    box-sizing: border-box;
+}
+
+.title-container {
+    text-align: left;
+    /* Animation nhẹ cho tiêu đề khi load (ví dụ) */
+    animation: fadeInDown 1s ease-out;
+}
+
+.description {
+    text-align: left;
+    max-width: 1200px;
+    align-self: flex-start;
+     /* Animation nhẹ cho mô tả khi load */
+    animation: fadeInUp 1s ease-out 0.3s;
+    animation-fill-mode: backwards; /* Giữ trạng thái đầu trước khi bắt đầu */
+}
+
+.hero h1,
+.hero .title-container p {
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Tăng độ đậm shadow */
+}
+.description p {
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Tăng độ đậm shadow */
+}
+
+.hero h1 {
+    font-size: 64px;
+    margin-bottom: 8px;
+}
+
+.hero .title-container p {
+    font-size: 48px;
+    font-weight: lighter;
+    opacity: 0.9;
+}
+
+.description p {
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        min-height: 500px;
+        padding: 20px 15px;
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero .title-container p {
+        font-size: 24px;
+    }
+    .description p {
+        font-size: 16px;
+    }
+    
+}
+
+/* === Destinations Section === */
+.destinations {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+.destinations h2 {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.grid-container > div { /* Áp dụng cho các .place... */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Bóng đổ rõ hơn */
+    border-radius: 8px; /* Bo góc nhẹ */
+    cursor: pointer; /* Con trỏ chuột */
+    /* Animation cho thẻ địa điểm */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.grid-container > div:hover {
+    transform: translateY(-5px); /* Nhấc lên nhẹ */
+}
+
+.grid-container > div:hover .overlay { /* Làm overlay rõ hơn khi hover */
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+
+
+/* Sizing */
+.placeLangChuTich { flex-basis: calc(60% - 9px); height: 300px; }
+.placeNhaThoLon { flex-basis: calc(40% - 6px); height: 300px; }
+.placeVanMieu, .placeHoHoanKiem, .placeChuaTranQuoc { flex-basis: calc(33.333% - 10px); height: 180px; }
+
+/* Overlay */
+.overlay {
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.4s ease; /* Hiệu ứng chuyển màu nền */
+    align-content: end;
+    opacity: 0;
+}
+
+.overlay h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2; 
+}
+
+.overlay p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.3;
+}
+
+
+/* Responsive Destinations */
+@media (max-width: 768px) {
+    .destinations h2 { font-size: 1.4em; }
+    .placeLangChuTich, .placeNhaThoLon, .placeVanMieu, .placeHoHoanKiem, .placeChuaTranQuoc {
+        flex-basis: calc(50% - 7.5px);
+        height: 220px;
+    }
+}
+@media (max-width: 480px) {
+    .destinations h2 { font-size: 1.3em; }
+    .placeLangChuTich, .placeNhaThoLon, .placeVanMieu, .placeHoHoanKiem, .placeChuaTranQuoc {
+        flex-basis: 100%;
+        height: 200px;
+    }
+    .overlay h3 { font-size: 1em; }
+    .overlay p { font-size: 0.8em; }
+}
+
+/* === Cuisine Section === */
+.cuisine {
+    padding: 50px 15px;
+    background-color: #fff5f5;
+}
+
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cuisine-title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.cuisine-icon { margin-right: 8px; color: #555; font-size: 0.9em; }
+.cuisine-subtitle { text-align: center; font-size: 0.9em; color: #777; text-transform: uppercase; margin-bottom: 40px; letter-spacing: 1px; }
+
+.cuisine-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.cuisine-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08); /* Tăng nhẹ bóng đổ */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer; /* Con trỏ chuột */
+    /* Animation cho thẻ món ăn */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cuisine-item:hover {
+    transform: translateY(-6px); /* Nhấc lên */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12); /* Bóng đổ đậm hơn */
+}
+.cuisine-item:hover .cuisine-image img {
+    transform: scale(1.05); /* Phóng to ảnh khi hover thẻ */
+}
+
+.cuisine-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.cuisine-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Animation phóng to ảnh */
+    transition: transform 0.4s ease; /* Tăng nhẹ thời gian */
+}
+
+.cuisine-content { padding: 20px; flex-grow: 1; }
+.cuisine-content h3 { font-size: 1.2em; font-weight: bold; color: #333; margin-top: 0; margin-bottom: 10px; }
+.cuisine-content p { font-size: 0.9em; color: #666; line-height: 1.6; margin: 0; }
+
+/* Responsive Cuisine */
+@media (max-width: 992px) {
+    .cuisine-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+@media (max-width: 576px) {
+    .cuisine-grid { grid-template-columns: 1fr; gap: 20px; }
+    .container { max-width: none; }
+    .cuisine-title { font-size: 1.8em; }
+    .cuisine-subtitle { font-size: 0.8em; margin-bottom: 30px; }
+    .cuisine-content h3 { font-size: 1.1em; }
+    .cuisine-content p { font-size: 0.85em; }
+}
+
+/* === Tours Section === */
+.tours {
+    padding: 50px 15px;
+    background-color: #e0f2f7;
+}
+
+.tours-title { text-align: center; font-size: 1.8em; font-weight: bold; color: #333; text-transform: uppercase; margin-bottom: 35px; letter-spacing: 1px; }
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.tour-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    cursor: pointer; /* Con trỏ chuột */
+    /* Animation cho thẻ tour - đã có sẵn, chỉ cần thêm :hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Chỉnh lại ease */
+}
+.tour-card:hover {
+    transform: translateY(-8px); /* Nhấc lên cao hơn một chút */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Bóng đổ rõ hơn */
+}
+.tour-card:hover .tour-card-image img {
+    transform: scale(1.03); /* Phóng to ảnh nhẹ */
+}
+
+.tour-card-image { width: 100%; aspect-ratio: 16 / 10; overflow: hidden; }
+.tour-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Animation phóng to ảnh */
+    transition: transform 0.4s ease;
+}
+
+.tour-card-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+.tour-card-title { font-size: 1.25em; font-weight: bold; color: #333; margin-top: 0; margin-bottom: 5px; }
+.tour-card-detail { font-size: 0.85em; color: #777; margin-top: 0; margin-bottom: 15px; flex-grow: 1; }
+.tour-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: 15px; border-top: 1px solid #f0f0f0; }
+.tour-card-price { display: flex; align-items: baseline; }
+.price-amount { font-size: 1.3em; font-weight: bold; color: #ff0000; margin-right: 4px; }
+.price-unit { font-size: 0.85em; color: #666; }
+
+.tour-card-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+    cursor: pointer; /* Đã có */
+    /* Animation cho nút */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.tour-card-button:hover {
+    background-color: #0056b3; /* Đã có */
+    transform: translateY(-2px); /* Nhấc nút lên nhẹ */
+}
+
+/* Responsive Tours */
+@media (max-width: 350px) {
+    .tour-card-footer { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .tour-card-button { width: 100%; text-align: center; }
+}
+
+/* === Footer === */
+.site-footer { background-color: #2c3e50; color: #bdc3c7; padding: 40px 0 20px 0; font-size: 0.9em; }
+
+.footer-subscribe { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding-bottom: 30px; margin-bottom: 30px; border-bottom: 1px solid #46607a; }
+.subscribe-label { color: #ffffff; margin-bottom: 10px; flex-basis: 100%; text-align: left; }
+.subscribe-form { display: flex; flex-grow: 1; max-width: 500px; }
+.subscribe-input { flex-grow: 1; padding: 10px 15px; border: 1px solid #46607a; background-color: #ffffff; color: #333; border-radius: 4px 0 0 4px; outline: none; }
+
+.subscribe-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer; /* Đã có */
+    font-weight: bold;
+    /* Animation cho nút subscribe */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.subscribe-button:hover {
+    background-color: #2980b9; /* Đã có */
+    transform: translateY(-2px); /* Nhấc nút lên nhẹ */
+}
+
+.footer-main { display: grid; grid-template-columns: 2fr 1.5fr 1fr; gap: 30px; margin-bottom: 30px; }
+.footer-column h4 { color: #ffffff; font-size: 1.1em; margin-top: 0; margin-bottom: 15px; text-transform: uppercase; }
+.footer-column ul { list-style: none; padding: 0; margin: 0; }
+.footer-column ul li { margin-bottom: 10px; }
+
+.footer-column ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer; /* Con trỏ chuột */
+    /* Animation cho link footer */
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.footer-column ul li a:hover {
+    color: #ffffff; /* Đã có */
+    transform: translateX(3px); /* Di chuyển sang phải nhẹ */
+}
+
+.footer-social .social-icon { margin-right: 8px; font-size: 1.1em; width: 20px; text-align: center; color: #ffffff; }
+
+.footer-extra { display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end; }
+.dmca-badge { margin-top: auto; max-width: 100px; cursor: pointer; /* Nếu badge là link */ transition: opacity 0.2s ease;} /* Animation */
+.dmca-badge:hover { opacity: 0.8; } /* Hiệu ứng mờ nhẹ khi hover */
+.dmca-badge img { display: block; max-width: 100%; height: auto; }
+
+.footer-bottom { padding-top: 20px; text-align: center; }
+.footer-divider { border: 0; border-top: 1px solid #46607a; margin: 0 auto 20px auto; width: 100%; }
+.footer-bottom p { margin: 0; font-size: 0.85em; color: #95a5a6; }
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-subscribe { flex-direction: column; align-items: flex-start; }
+    .subscribe-label { flex-basis: auto; }
+    .subscribe-form { max-width: none; width: 100%; }
+    .footer-main { grid-template-columns: 1fr; gap: 30px; }
+    .footer-extra { align-items: flex-start; margin-top: 20px; }
+}
+@media (max-width: 480px) {
+    .subscribe-input, .subscribe-button { font-size: 0.9em; }
+    .footer-column h4 { font-size: 1em; }
+    .site-footer { font-size: 0.85em; }
+}
+
+/* === Keyframes cho animation hero (ví dụ) === */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-scroll-item {
+    cursor: pointer; /* Biến con trỏ thành hình bàn tay */
+    /* Thêm các style khác nếu cần (padding, margin,...) */
+    display: inline-block; /* Có thể cần thiết tùy thuộc thẻ bạn dùng */
+    /* Thêm hiệu ứng hover nếu muốn */
+    transition: color 0.3s ease;
+}
+  
+  .nav-scroll-item:hover {
+    color: #007bff; /* Ví dụ đổi màu khi hover */
+}
+
