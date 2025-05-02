@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tour Du Lịch Trip</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="left-section">
+      <a href="/index.html">Tour</a>
+    </div>
+    <div class="divider"></div>
+    <nav class="nav-links">
+                <a class="nav-scroll-item" href="/index.html">Home</a>
+                <a class="nav-scroll-item" href="/diem_den/diemden.html">Điểm đến</a>
+                <a class="nav-scroll-item" href="/am_thuc/amthucmainpage.htm">Ẩm thực</a>
+                <a class="nav-scroll-item" href="/trangtuor/index.html">Đặt Tour</a>
+                <a class="nav-scroll-item" href="#">Dịch Vụ</a>
+            
+            <ul><i class="fa fa-question" aria-hidden="true"></i>
+                <div class="res-log-main">
+                    <a href="/gioithieu_hoidap_hotro/gioithieu.html">Giới Thiệu</a>
+                    <a href="/gioithieu_hoidap_hotro/hoidap.html">Hỏi Đáp</a>
+                    <a href="#">Hỗ Trợ</a>
+                </div>
+            </ul>
+
+            <a href="#"><i class="fas fa-search"></i></a>
+            <ul><i class="fas fa-user"></i>
+                <div class="res-log-main">
+                  <a href="/res_log/dangki.htm">Đăng Kí</a>
+                  <a href="/res_log/dangnhap.htm">Đăng Nhập</a>
+                </div>
+            </ul>
+    </nav>
+</header>
+
+
+    <div class="header">
+        <h1>TOUR DU LỊCH<br>TRIP</h1>
+    </div>
+      
+      <div class="container">
+        <div class="section">
+        <h2>Tour ưu đãi tốt nhất hôm nay</h2>
+        <div class="tour-list">
+          <div class="tour-item" onclick="goToPost('hanoi-1ngay')">
+            <img src="a4.jpg" alt="Hà Nội">
+            <div class="info">
+              <strong>Tham quan Hà Nội</strong><br>
+              Thời gian: 1 ngày
+            </div>
+          </div>
+          <div class="tour-item" onclick="goToPost('hanoi-3ngay')">
+            <img src="a5.jpg" alt="Hà Nội">
+            <div class="info">
+              <strong>Tham quan Hà Nội</strong><br>
+              Thời gian: 3 ngày 2 đêm
+            </div>
+          </div>
+          <div class="tour-item" onclick="goToPost('hanoi-hatay')">
+            <img src="a3.png" alt="Hà Tây">
+            <div class="info">
+              <strong>Hà Nội - Hà Tây</strong><br>
+              Thời gian: Trong ngày
+            </div>
+          </div>
+          <div class="tour-item" onclick="goToPost('pho-co')">
+            <img src="a2.png" alt="Phố cổ">
+            <div class="info">
+              <strong>Tour đi bộ khám phá phố cổ Hà Nội</strong><br>
+              Thời gian: Trong ngày
+            </div>
+          </div>
+        </div>
+        </div>
+        <a href="#" class="btn">Xem thêm</a>
+      </div>
+
+      <div class="container" style="width: 100%; background-color: #cde3f2; margin: 0;">
+        <div class="section" id="tour-pho-bien" style="width: 70%; margin: 0 auto;">
+          <h2>TOUR PHỔ BIẾN</h2>
+          
+          <div class="tour-list">
+            <div class="tour-item">
+              <img src="b1.png" alt="Vườn quốc gia Ba Vì">
+              <div class="info">
+                <strong>Thời gian: Trong ngày</strong><br>
+                
+                <br><br>
+              </div>
+            </div>
+      
+            <div class="tour-item">
+              <img src="b2.png" alt="Làng cổ Đường Lâm">
+              <div class="info">
+                <strong>Thời gian:1 ngày</strong><br>
+                
+                <br><br>
+              </div>
+            </div>
+      
+            <div class="tour-item">
+              <img src="chuahuong.png" alt="Chùa Hương">
+              <div class="info">
+                <strong>CHÙA HƯƠNG</strong><br>
+                Lương Sơn, Mỹ Đức, Hà Nội, Việt Nam
+                <br><br>
+              </div>
+            </div>
+      
+            <div class="tour-item">
+              <img src="thiensonsuoinga.png" alt="Thiên Sơn Suối Ngà">
+              <div class="info">
+                <strong>THIÊN SƠN SUỐI NGÀ</strong><br>
+                Ba Vì, Hà Nội
+                <br><br>
+              </div>
+            </div>
+          </div>
+      
+          <a href="#" class="btn">Xem thêm</a>
+        </div>
+      </div>
+      
+      <footer class="site-footer">
+        <div class="container">
+    
+            <div class="footer-subscribe">
+                <label for="footer-email" class="subscribe-label">Nhập email để nhận thông tin mới nhất:</label>
+                <form class="subscribe-form" action="#"> <input type="email" id="footer-email" class="subscribe-input" placeholder="Nhập email của bạn..." required>
+                    <button type="submit" class="subscribe-button">Gửi</button>
+                </form>
+            </div>
+    
+            <div class="footer-main">
+                <div class="footer-column footer-links">
+                    <h4>Web</h4>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="#">Dịch vụ</a></li>
+                        <li><a href="/am_thuc/amthucmainpage.htm">Ẩm thực Hà Nội</a></li>
+                        <li><a href="#">Điểm đến nổi bật</a></li>
+                        <li><a href="#">Đặt chuyến du lịch - tham quan</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-column footer-social">
+                    <h4>Liên hệ với chúng tôi qua:</h4>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f social-icon"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-youtube social-icon"></i> Youtube</a></li>
+                        <li><a href="#"><i class="fab fa-tiktok social-icon"></i> Tiktok</a></li>
+                        <li><a href="#"><i class="fa-brands fa-rocketchat social-icon"></i> Zalo</a></li> <li><a href="#"><i class="fab fa-instagram social-icon"></i> Instagram</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-column footer-extra">
+                     <div class="dmca-badge">
+                         <a href="//www.dmca.com/Protection/Status.aspx?ID=YOUR-DMCA-ID" title="DMCA.com Protection Status" class="dmca-badge">
+                            <img src="public/image/dmca-badge.png" alt="DMCA.com Protection Status" />
+                         </a>
+                         <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+                     </div>
+                </div>
+            </div> <div class="footer-bottom">
+                <hr class="footer-divider">
+                <p>&copy; <span id="current-year"></span> Vietnam VNM Travel. All rights reserved.</p>
+            </div>
+    
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

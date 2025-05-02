@@ -5,6 +5,10 @@ body {
     box-sizing: border-box;
 }
 
+:root {
+    --button-color: #007bff;
+}
+
 /* === Header === */
 .main-header {
     display: flex;
@@ -506,7 +510,7 @@ body {
 
 .tour-card-button {
     display: inline-block;
-    background-color: #007bff;
+    background-color: var(--button-color);
     color: #ffffff;
     padding: 8px 15px;
     border: none;

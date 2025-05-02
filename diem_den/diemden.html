@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Du lịch Hà Nội</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="diemden.css">
+
+</head>
+<body>
+  <header class="main-header">
+    <div class="left-section">
+      <a href="#">Điểm đến</a>
+    </div>
+    <div class="divider"></div>
+    <nav class="nav-links">
+            <a class="nav-scroll-item" href="/index.html">Home</a>
+            <a class="nav-scroll-item" href="#">Điểm đến</a>
+            <a class="nav-scroll-item" href="/am_thuc/amthucmainpage.htm">Ẩm thực</a>
+            <a class="nav-scroll-item" href="/trangtuor/index.html">Đặt Tour</a>
+            <a class="nav-scroll-item" href="#">Dịch Vụ</a>
+            
+            <ul><i class="fa fa-question" aria-hidden="true"></i>
+                <div class="res-log-main">
+                    <a href="gioithieu_hoidap_hotro/gioithieu.html">Giới Thiệu</a>
+                    <a href="gioithieu_hoidap_hotro/hoidap.html">Hỏi Đáp</a>
+                    <a href="#">Hỗ Trợ</a>
+                </div>
+            </ul>
+
+            <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+            <ul><i class="fa fa-user" aria-hidden="true"></i>
+                <div class="res-log-main">
+                  <a href="/res_log/dangki.htm">Đăng Kí</a>
+                  <a href="/res_log/dangnhap.htm">Đăng Nhập</a>
+                </div>
+            </ul>
+    </nav>
+</header>
+
+<!-- Ảnh nền + Thanh tìm kiếm -->
+<div class="hero-search">
+  <div class="search-bar">
+    <input type="text" placeholder="Bạn muốn đi đâu?">
+    <select>
+      <option>Chọn Quận/Huyện</option>
+      <option>Ba Đình</option>
+      <option>Hoàn Kiếm</option>
+      <option>Hai Bà Trưng</option>
+      <option>Đống Đa</option>
+      <option>Long Biên</option>
+      <option>Cầu Giấy</option>
+      <option>Hà Đông</option>
+      <option>Sóc Sơn</option>
+      <option>Ba Vì</option>
+      <option>Chương Mỹ</option>
+    </select>
+    <input type="date">
+    <button>Tìm</button>
+  </div>
+</div>
+
+<!-- Slider ảnh phủ Tây Hồ -->
+<div class="slider-container">
+  <div class="slides" id="slides">
+    <div class="slide">
+      <img src="https://senvanggroup.com/wp-content/uploads/2020/05/phu-tay-ho-nemtv-2-1.jpg" alt="Phủ Tây Hồ">
+      <div class="slide-text">Phủ Tây Hồ</div>
+    </div>
+    <div class="slide">
+      <img src="/public/image/cauthehuc.png" alt="Chùa Trấn Quốc">
+      <div class="slide-text">Chùa Trấn Quốc</div>
+    </div>
+    <div class="slide">
+      <img src="https://i.imgur.com/BH1ikGf.jpg" alt="Ba Vì">
+      <div class="slide-text">Vườn quốc gia Ba Vì</div>
+    </div>
+  </div>
+  <button class="slider-btn left" onclick="prevSlide()">&#10094;</button>
+  <button class="slider-btn right" onclick="nextSlide()">&#10095;</button>
+</div>
+
+<!-- Địa điểm nội thành -->
+<section>
+  <h2>Địa điểm nội thành Hà Nội</h2>
+  <div class="card-grid">
+    <div class="card"><img src="https://i.imgur.com/Yghxz9F.jpg"><div class="info">Hồ Hoàn Kiếm<br><button>Đặt ngay</button></div></div>
+    <div class="card"><img src="https://i.imgur.com/5cPBBWT.jpg"><div class="info">Lăng Bác<br><button>Đặt ngay</button></div></div>
+    <div class="card"><img src="https://i.imgur.com/VOeGZ7h.jpg"><div class="info">Nhà thờ lớn<br><button>Đặt ngay</button></div></div>
+    <div class="card"><img src="https://i.imgur.com/XEO06Th.jpg"><div class="info">Chùa Trấn Quốc<br><button>Đặt ngay</button></div></div>
+  </div>
+</section>
+
+<!-- Địa điểm ngoại thành -->
+<section>
+  <h2>Địa điểm ngoại thành Hà Nội</h2>
+  <div class="card-grid">
+    <div class="card"><img src="https://i.imgur.com/dOZjtzr.jpg"><div class="info">Làng cổ Đường Lâm<br><button>Đặt ngay</button></div></div>
+    <div class="card"><img src="https://i.imgur.com/zUm0vGq.jpg"><div class="info">Đầm Long<br><button>Đặt ngay</button></div></div>
+    <div class="card"><img src="https://i.imgur.com/gaLzAfO.jpg"><div class="info">Chùa Hương<br><button>Đặt ngay</button></div></div>
+    <div class="card"><img src="https://i.imgur.com/BH1ikGf.jpg"><div class="info">Thiên Sơn Suối Ngà<br><button>Đặt ngay</button></div></div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="container">
+
+      <div class="footer-subscribe">
+          <label for="footer-email" class="subscribe-label">Nhập email để nhận thông tin mới nhất:</label>
+          <form class="subscribe-form" action="#"> <input type="email" id="footer-email" class="subscribe-input" placeholder="Nhập email của bạn..." required>
+              <button type="submit" class="subscribe-button">Gửi</button>
+          </form>
+      </div>
+
+      <div class="footer-main">
+          <div class="footer-column footer-links">
+              <h4>Web</h4>
+              <ul>
+                  <li><a href="index.html">Trang chủ</a></li>
+                  <li><a href="#">Dịch vụ</a></li>
+                  <li><a href="/am_thuc/amthucmainpage.htm">Ẩm thực Hà Nội</a></li>
+                  <li><a href="#">Điểm đến nổi bật</a></li>
+                  <li><a href="#">Đặt chuyến du lịch - tham quan</a></li>
+              </ul>
+          </div>
+
+          <div class="footer-column footer-social">
+              <h4>Liên hệ với chúng tôi qua:</h4>
+              <ul>
+                  <li><a href="#"><i class="fab fa-facebook-f social-icon"></i> Facebook</a></li>
+                  <li><a href="#"><i class="fab fa-youtube social-icon"></i> Youtube</a></li>
+                  <li><a href="#"><i class="fab fa-tiktok social-icon"></i> Tiktok</a></li>
+                  <li><a href="#"><i class="fa-brands fa-rocketchat social-icon"></i> Zalo</a></li> <li><a href="#"><i class="fab fa-instagram social-icon"></i> Instagram</a></li>
+              </ul>
+          </div>
+
+          <div class="footer-column footer-extra">
+               <div class="dmca-badge">
+                   <a href="//www.dmca.com/Protection/Status.aspx?ID=YOUR-DMCA-ID" title="DMCA.com Protection Status" class="dmca-badge">
+                      <img src="public/image/dmca-badge.png" alt="DMCA.com Protection Status" />
+                   </a>
+                   <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+               </div>
+          </div>
+      </div> <div class="footer-bottom">
+          <hr class="footer-divider">
+          <p>&copy; <span id="current-year"></span> Vietnam VNM Travel. All rights reserved.</p>
+      </div>
+
+  </div>
+<script>
+  let current = 0;
+  function showSlide(index) {
+    const slides = document.getElementById('slides');
+    const total = slides.children.length;
+    current = (index + total) % total;
+    slides.style.transform = `translateX(-${current * 100}vw)`;
+  }
+  function nextSlide() { showSlide(current + 1); }
+  function prevSlide() { showSlide(current - 1); }
+  setInterval(nextSlide, 5000);
+</script>
+
+</body>
+</html>
