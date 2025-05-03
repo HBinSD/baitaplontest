@@ -112,7 +112,7 @@ body {
 
     .nav-links a, .nav-links i{
         font-size: 10px;
-        gap: -5px
+        gap: -5px;
     }
 
 }
@@ -178,7 +178,19 @@ body {
     object-fit: cover;
 }
 
-
+@media screen and (max-width: 728px) {
+    .gioithieu-main,
+    .gioithieu-member {
+        width: 95%;
+        padding: 8px 12px;
+    }
+    .gioithieu { width: 100%;}
+    .gioithieu-header h1 {font-size: 18px;}
+    .gioithieu-body p {font-size: 14px;}
+    .gioithieu-member-header h2 {font-size: 18px;}
+    .member-list {width: 100%;}
+    .member-item {flex-basis: 100%; margin: 0 auto;}
+}
 
 
 

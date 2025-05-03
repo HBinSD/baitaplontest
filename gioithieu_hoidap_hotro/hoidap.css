@@ -112,7 +112,7 @@ body {
 
     .nav-links a, .nav-links i{
         font-size: 10px;
-        gap: -5px
+        gap: -5px;
     }
 
 }
@@ -153,7 +153,12 @@ body {
 }
 
 
-
+@media (max-width:728px) {
+    .hero {width: 100%; margin: 0;}
+    .title h1 {font-size: 18px;}
+    .question {width: 90%;}
+    .question-item {font-size: 12px;}
+}
 
 
 

@@ -112,7 +112,7 @@ display: block;
 
 .nav-links a, .nav-links i{
     font-size: 10px;
-    gap: -5px
+    gap: -5px;
 }
 
 }
