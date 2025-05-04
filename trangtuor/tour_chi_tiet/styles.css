@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.poster-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Tiêu đề */
+h1 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Hình ảnh và giá */
+.image-price-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.image-gallery {
+    width: 60%;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.thumbnail-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 48%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.price-box {
+    background-color: #ffeb3b;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 35%;
+}
+
+.price-box h2 {
+    font-size: 20px;
+    margin: 0;
+    color: #d32f2f;
+}
+
+.price-box h2 span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.price-box p {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.price-box button {
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.price-box button:hover {
+    background-color: #b71c1c;
+}
+
+/* Overlay phóng to ảnh */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Mô tả chương trình */
+.description {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.description h3 {
+    font-size: 18px;
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.description ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.description li {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Lịch trình */
+.itinerary h3 {
+    font-size: 18px;
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.itinerary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.itinerary li {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.itinerary li strong {
+    color: #d32f2f;
+}
