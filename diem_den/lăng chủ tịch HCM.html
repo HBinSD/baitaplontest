@@ -4,10 +4,123 @@
   <meta charset="UTF-8">
   <title>Lăng Chủ tịch Hồ Chí Minh</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
       box-sizing: border-box;
     }
+
+/* === Header === */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 30px;
+    background-color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.left-section a {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    margin-right: 20px;
+    white-space: nowrap;
+    transition: color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;  
+    display: inline-block;
+}
+.left-section a:hover {
+    color: #007bff;
+    transform: translateY(-2px);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;  
+    display: inline-block;
+}
+.nav-links a:hover {
+    color: #007bff;
+    transform: translateY(-2px);
+}
+
+.nav-links i {
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;  
+    display: inline-block;
+}
+.nav-links i:hover {
+    color: #007bff;
+    transform: scale(1.1) translateY(-1px);
+}
+
+.nav-scroll-item {
+    cursor: pointer;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.nav-scroll-item:hover {
+    color: #007bff; 
+}
+
+/* login res */
+.nav-links ul {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.res-log-main {
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 5;
+    right: -30px;
+}
+
+.res-log-main a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: none;
+    cursor: pointer;
+}
+
+.nav-links ul:hover > .res-log-main a{
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .left-section {
+        font-size: 10px;
+        margin-left: -12px;
+    }
+
+    .nav-links a, .nav-links i{
+        font-size: 10px;
+        gap: -5px;
+    }
+
+}
 
     body {
       font-family: 'Roboto', sans-serif;
@@ -177,19 +290,127 @@
         justify-content: center;
       }
     }
+    .site-footer { background-color: #2c3e50; color: #bdc3c7; padding: 40px 0 20px 0; font-size: 0.9em; }
+.container{ padding: 0px 50px; } 
+.footer-subscribe { 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-items: center; 
+    padding-bottom: 30px; 
+    margin-bottom: 30px; 
+    border-bottom: 1px solid #46607a;
+}
+
+.subscribe-label { 
+    color: #ffffff; 
+    margin-bottom: 10px; 
+    flex-basis: 100%; 
+    text-align: left; 
+}
+
+.subscribe-form { 
+    display: flex; 
+    flex-grow: 1;
+    max-width: 500px; 
+}
+
+.subscribe-input { 
+    flex-grow: 1; 
+    padding: 10px 15px; 
+    border: 1px solid #46607a; 
+    background-color: #ffffff; 
+    color: #333; 
+    border-radius: 4px 0 0 4px; 
+    outline: none; 
+}
+
+.subscribe-button {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.subscribe-button:hover {
+    background-color: #2980b9;
+}
+
+.footer-main { display: grid; grid-template-columns: 2fr 1.5fr 1fr; gap: 30px; margin-bottom: 30px; }
+.footer-column h4 { color: #ffffff; font-size: 1.1em; margin-top: 0; margin-bottom: 15px; text-transform: uppercase; }
+.footer-column ul { list-style: none; padding: 0; margin: 0; }
+.footer-column ul li { margin-bottom: 10px; }
+
+.footer-column ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.footer-column ul li a:hover {
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+.footer-social .social-icon { margin-right: 8px; font-size: 1.1em; width: 20px; text-align: center; color: #ffffff; }
+
+.footer-extra { display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end; }
+.dmca-badge { margin-top: auto; max-width: 100px; cursor: pointer; /* Nếu badge là link */ transition: opacity 0.2s ease;}
+.dmca-badge:hover { opacity: 0.8; }
+.dmca-badge img { display: block; max-width: 100%; height: auto; }
+
+.footer-bottom { padding-top: 20px; text-align: center; }
+.footer-divider { border: 0; border-top: 1px solid #46607a; margin: 0 auto 20px auto; width: 100%; }
+.footer-bottom p { margin: 0; font-size: 0.85em; color: #95a5a6; }
+
   </style>
 </head>
 <body>
+  <header class="main-header">
+        <div class="left-section">
+            <a href="#">Ẩm Thực</a>
+        </div>
+        <div class="divider"></div>
+        <nav class="nav-links">
+                <a class="nav-scroll-item" href="../../index.html">Home</a>
+                <a class="nav-scroll-item" href="../../diem_den/diemden.html">Điểm đến</a>
+                <a class="nav-scroll-item" href="../amthucmainpage.htm">Ẩm thực</a>
+                <a class="nav-scroll-item" href="../../trangtuor/index.html">Đặt Tour</a>
+ 
+                
+                <ul><i class="fa fa-question" aria-hidden="true"></i>
+                    <div class="res-log-main">
+                        <a href="../../gioithieu_hoidap_hotro/gioithieu.html">Giới Thiệu</a>
+                        <a href="../../gioithieu_hoidap_hotro/hoidap.html">Hỏi Đáp</a>
+                        <a href="#">Hỗ Trợ</a>
+                    </div>
+                </ul>
+    
+                <a href="#"><i class="fas fa-search"></i></a>
+                <ul><i class="fas fa-user"></i>
+                    <div class="res-log-main">
+                        <a href="../../res_log/dangki.htm">Đăng Kí</a>
+                        <a href="../../res_log/dangnhap.htm">Đăng Nhập</a>
+                    </div>
+                </ul>
+        </nav>
+    </header>
+
   <div class="container">
     <h1>📍 Lăng Chủ tịch Hồ Chí Minh</h1>
     <h2>Nơi yên nghỉ của vị Cha già dân tộc</h2>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Lang_Bac.jpg" alt="Lăng Chủ tịch" class="main-image" ondblclick="imageClick(this)">
+    <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res40/95000/95385-Ho-Chi-Minh-Mausoleum.jpg" alt="Lăng Chủ tịch" class="main-image" ondblclick="imageClick(this)">
     <div class="main-caption">Quảng trường Ba Đình, Hà Nội</div>
 
     <div class="image-grid">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Lang_Chu_tich_Ho_Chi_Minh.jpg" alt="Lăng Bác 1" ondblclick="imageClick(this)">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Bao_ve_lang_Bac.jpg" alt="Lăng Bác 2" ondblclick="imageClick(this)">
+      <img src="https://tamanh.net/wp-content/uploads/2023/07/lang-bac-mo-cua-thu-may.jpg" alt="Lăng Bác 1" ondblclick="imageClick(this)">
+      <img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res40/95000/95385-Ho-Chi-Minh-Mausoleum.jpg" alt="Lăng Bác 2" ondblclick="imageClick(this)">
     </div>
 
     <div class="section">
@@ -217,10 +438,67 @@
         <div class="date" onclick="alert('Bạn chọn ngày 11/4')">Thứ 6<br>11/4</div>
         <div class="date" onclick="alert('Bạn chọn ngày 13/4')">CN<br>13/4</div>
       </div>
-    </div>
 
+    </div>
     <button class="btn" onclick="alert('Bạn đã đặt lịch thành công!')">ĐẶT LỊCH NGAY</button>
-  </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+   <footer class="site-footer">
+        <div class="container">
+    
+            <div class="footer-subscribe">
+                <label for="footer-email" class="subscribe-label">Nhập email để nhận thông tin mới nhất:</label>
+                <form class="subscribe-form" action="#"> <input type="email" id="footer-email" class="subscribe-input" placeholder="Nhập email của bạn..." required>
+                    <button type="submit" class="subscribe-button">Gửi</button>
+                </form>
+            </div>
+    
+            <div class="footer-main">
+                <div class="footer-column footer-links">
+                    <h4>Web</h4>
+                    <ul>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="#">Dịch vụ</a></li>
+                        <li><a href="/am_thuc/amthucmainpage.htm">Ẩm thực Hà Nội</a></li>
+                        <li><a href="#">Điểm đến nổi bật</a></li>
+                        <li><a href="#">Đặt chuyến du lịch - tham quan</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-column footer-social">
+                    <h4>Liên hệ với chúng tôi qua:</h4>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f social-icon"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-youtube social-icon"></i> Youtube</a></li>
+                        <li><a href="#"><i class="fab fa-tiktok social-icon"></i> Tiktok</a></li>
+                        <li><a href="#"><i class="fa-brands fa-rocketchat social-icon"></i> Zalo</a></li> <li><a href="#"><i class="fab fa-instagram social-icon"></i> Instagram</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-column footer-extra">
+                     <div class="dmca-badge">
+                         <a href="//www.dmca.com/Protection/Status.aspx?ID=YOUR-DMCA-ID" title="DMCA.com Protection Status" class="dmca-badge">
+                            <img src="data:image/jpeg;base64,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" alt="DMCA.com Protection Status" />
+                         </a>
+                         <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+                     </div>
+                </div>
+            </div> 
+            
+            <div class="footer-bottom">
+                <hr class="footer-divider">
+                <p>&copy; <span id="current-year"></span> Vietnam VNM Travel. All rights reserved.</p>
+            </div>
+    
+        </div>
+        <script src="index.js"></script>
+    </footer>
 
   <script>
     function imageClick(img) {
