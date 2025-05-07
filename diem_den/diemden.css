@@ -120,7 +120,7 @@ display: block;
 /* --- Ảnh nền có thanh tìm kiếm --- */
 .hero-search {
   position: relative;
-  background: url('https://media.istockphoto.com/id/160179168/vi/anh/c%E1%BA%A3nh-quan-th%C3%A0nh-ph%E1%BB%91-h%C3%A0-n%E1%BB%99i.jpg?s=612x612&w=0&k=20&c=S_O-z36nrjV2fAzwanS4JMYnKYu_AMgfmiCWs4k00x8=') no-repeat center center/cover;
+  background: url('https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/07/anh-ho-guom.jpg') no-repeat center center/cover;
   height: 80vh; /* Điều chỉnh chiều cao của ảnh đầu trang */
   display: flex;
   align-items: center;
