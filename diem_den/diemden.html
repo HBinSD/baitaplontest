@@ -7,55 +7,72 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="diemden.css">
-
+  <link rel="stylesheet" href="../header.css">
 </head>
 <body>
-  <header class="main-header">
-    <div class="left-section">
-      <a href="#">Điểm đến</a>
-    </div>
-    <div class="divider"></div>
-    <nav class="nav-links">
-            <a class="nav-scroll-item" href="../index.html">Home</a>
-            <a class="nav-scroll-item" href="#">Điểm đến</a>
-            <a class="nav-scroll-item" href="../am_thuc/amthucmainpage.htm">Ẩm thực</a>
-            <a class="nav-scroll-item" href="../trangtuor/index.html">Đặt Tour</a>
-
-            
-            <ul><i class="fa fa-question" aria-hidden="true"></i>
-                <div class="res-log-main">
-                    <a href="../gioithieu_hoidap_hotro/gioithieu.html">Giới Thiệu</a>
-                    <a href="../gioithieu_hoidap_hotro/hoidap.html">Hỏi Đáp</a>
-                    <a href="#">Hỗ Trợ</a>
-                </div>
-            </ul>
-
-            <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-            <ul><i class="fa fa-user" aria-hidden="true"></i>
-                <div class="res-log-main">
-                  <a href="../res_log/dangki.htm">Đăng Kí</a>
-                  <a href="../res_log/dangnhap.htm">Đăng Nhập</a>
-                </div>
-            </ul>
-    </nav>
+<header class="main-header">
+  <div class="left-section">
+    <a href="../index.html"><img src="../logo.jpg" alt=""></a>
+  </div>
+  <div class="divider"></div>
+  <nav class="nav-links">
+    <a class="nav-scroll-item" href="../index.html">Home</a>
+    <a class="nav-scroll-item" href="#">Điểm đến</a>
+    <a class="nav-scroll-item" href="../am_thuc/amthucmainpage.htm">Ẩm thực</a>
+    <a class="nav-scroll-item" href="../trangtuor/index.html">Đặt Tour</a>
+    <ul><i class="fa fa-question" aria-hidden="true"></i>
+      <div class="res-log-main">
+        <a href="../gioithieu_hoidap_hotro/gioithieu.html">Giới Thiệu</a>
+        <a href="../gioithieu_hoidap_hotro/hoidap.html">Hỏi Đáp</a>
+        <a href="#">Hỗ Trợ</a>
+      </div>
+    </ul>
+    <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+    <ul><i class="fa fa-user" aria-hidden="true"></i>
+      <div class="res-log-main">
+        <a href="../res_log/dangki.htm">Đăng Kí</a>
+        <a href="../res_log/dangnhap.htm">Đăng Nhập</a>
+      </div>
+    </ul>
+  </nav>
 </header>
 
 <!-- Ảnh nền + Thanh tìm kiếm -->
 <div class="hero-search">
   <div class="search-bar">
-    <input type="text" placeholder="Bạn muốn đi đâu?">
-    <select>
-      <option>Chọn Quận/Huyện</option>
+    <input type="text" id="keyword" placeholder="Bạn muốn đi đâu?">
+    <select id="district-select">
+      <option value="">Chọn Quận/Huyện</option>
       <option>Ba Đình</option>
       <option>Hoàn Kiếm</option>
+      <option>Tây Hồ</option>
       <option>Hai Bà Trưng</option>
       <option>Đống Đa</option>
-      <option>Long Biên</option>
       <option>Cầu Giấy</option>
+      <option>Thanh Xuân</option>
+      <option>Hoàng Mai</option>
+      <option>Long Biên</option>
       <option>Hà Đông</option>
-      <option>Sóc Sơn</option>
+      <option>Nam Từ Liêm</option>
+      <option>Bắc Từ Liêm</option>
+      <option>Sơn Tây</option>
       <option>Ba Vì</option>
       <option>Chương Mỹ</option>
+      <option>Đan Phượng</option>
+      <option>Đông Anh</option>
+      <option>Gia Lâm</option>
+      <option>Hoài Đức</option>
+      <option>Mê Linh</option>
+      <option>Mỹ Đức</option>
+      <option>Phú Xuyên</option>
+      <option>Phúc Thọ</option>
+      <option>Quốc Oai</option>
+      <option>Sóc Sơn</option>
+      <option>Thạch Thất</option>
+      <option>Thanh Oai</option>
+      <option>Thanh Trì</option>
+      <option>Thường Tín</option>
+      <option>Ứng Hòa</option>
     </select>
     <input type="date">
     <button>Tìm</button>
@@ -65,18 +82,9 @@
 <!-- Slider ảnh phủ Tây Hồ -->
 <div class="slider-container">
   <div class="slides" id="slides">
-    <div class="slide">
-      <img src="https://senvanggroup.com/wp-content/uploads/2020/05/phu-tay-ho-nemtv-2-1.jpg" alt="Phủ Tây Hồ">
-      <div class="slide-text">Phủ Tây Hồ</div>
-    </div>
-    <div class="slide">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Ch%C3%B9a_Tr%E1%BA%A5n_Qu%E1%BB%91c%2C_H%C3%A0_N%E1%BB%99i.jpg" alt="Chùa Trấn Quốc">
-      <div class="slide-text">Chùa Trấn Quốc</div>
-    </div>
-    <div class="slide" >
-      <img src="https://wyndham-thanhthuy.com/wp-content/uploads/2024/09/vuon-quoc-gia-ba-vi-1.jpg" alt="Ba Vì" >
-      <div class="slide-text">Vườn quốc gia Ba Vì</div>
-    </div>
+    <div class="slide"><img src="https://cdn.xanhsm.com/2024/11/902d8dae-phu-tay-ho-2.jpg" alt="Phủ Tây Hồ"><div class="slide-text">Phủ Tây Hồ</div></div>
+    <div class="slide"><img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/12/chua-tran-quoc-3-e1513304483276.jpg" alt="Chùa Trấn Quốc"><div class="slide-text">Chùa Trấn Quốc</div></div>
+    <div class="slide"><img src="https://vuonquocgiabavi.com.vn/wp-content/uploads/2021/06/z2557528690355_d0480c344186d5f13348b3373ffb13fb-scaled.jpg" alt="Ba Vì"><div class="slide-text">Vườn quốc gia Ba Vì</div></div>
   </div>
   <button class="slider-btn left" onclick="prevSlide()">&#10094;</button>
   <button class="slider-btn right" onclick="nextSlide()">&#10095;</button>
@@ -86,10 +94,10 @@
 <section>
   <h2>Địa điểm nội thành Hà Nội</h2>
   <div class="card-grid">
-    <a href="" class="card"><img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/61/44/bc/thap-rua-t-i-h-hoan-ki.jpg"><div class="info">Hồ Hoàn Kiếm<br><button>Đặt ngay</button></div></a>
-    <a href="lăng chủ tịch HCM.html" class="card"><img src="https://tophanoiaz.com/wp-content/uploads/2024/02/hinh-anh-lang-bac_16.jpg"><div class="info">Lăng Bác<br><button>Đặt ngay</button></div></a>
-    <a href="" class="card"><img src="https://ik.imagekit.io/tvlk/blog/2022/08/nha-tho-lon-ha-noi-2.jpg"><div class="info">Nhà thờ lớn<br><button>Đặt ngay</button></div></a>
-    <a href="" class="card"><img src="https://static.vinwonders.com/production/chua-tran-quoc-top-banner.jpg"><div class="info">Chùa Trấn Quốc<br><button>Đặt ngay</button></div></a>
+    <div class="card" data-quan-huyen="Hoàn Kiếm"><img src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/07/anh-ho-guom.jpg"><div class="info">Hồ Hoàn Kiếm<br><span>Địa chỉ: Q. Hoàn Kiếm</span><br><button>Đặt ngay</button></div></div>
+    <div class="card" data-quan-huyen="Ba Đình"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsUR0UFEEwgWCuSogetZZWziHIqR3bQSIniA&s"><div class="info">Lăng Bác<br><span>Địa chỉ: Q. Ba Đình</span><br><button>Đặt ngay</button></div></div>
+    <div class="card" data-quan-huyen="Hoàn Kiếm"><img src="https://sakos.vn/wp-content/uploads/2024/07/nha-tho-lon-ha-noi-1-1.jpg"><div class="info">Nhà thờ lớn<br><span>Địa chỉ: Q. Hoàn Kiếm</span><br><button>Đặt ngay</button></div></div>
+    <div class="card" data-quan-huyen="Tây Hồ"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Ch%C3%B9a_Tr%E1%BA%A5n_Qu%E1%BB%91c%2C_H%C3%A0_N%E1%BB%99i.jpg"><div class="info">Chùa Trấn Quốc<br><span>Địa chỉ: Q. Tây Hồ</span><br><button>Đặt ngay</button></div></div>
   </div>
 </section>
 
@@ -97,60 +105,61 @@
 <section>
   <h2>Địa điểm ngoại thành Hà Nội</h2>
   <div class="card-grid">
-    <div class="card"><img src="https://dulichghepdoan.org/image/cache/data/daily-tour/duong-lam/duong-lam2-660x542.jpg"><div class="info">Làng cổ Đường Lâm<br><button>Đặt ngay</button></div></div>
-    <div class="card"><img src="https://mia.vn/media/uploads/blog-du-lich/dam-minh-vao-ve-dep-yen-binh-tho-mong-o-dam-van-long-ninh-binh-1640319884.jpg"><div class="info">Đầm Long<br><button>Đặt ngay</button></div></div>
-    <div class="card"><img src="https://booking.muongthanh.com/upload_images/images/H%60/chua-thien-tru.jpg"><div class="info">Chùa Hương<br><button>Đặt ngay</button></div></div>
-    <div class="card"><img src="https://lynntimes.com/wyndhamthanhthuy/wp-content/uploads/2023/12/thien-son-suoi-nga-1.png"><div class="info">Thiên Sơn Suối Ngà<br><button>Đặt ngay</button></div></div>
+    <div class="card" data-quan-huyen="Sơn Tây"><img src="https://smot.bvhttdl.gov.vn/wp-content/uploads/2021/10/LANG-CO2.jpg"><div class="info">Làng cổ Đường Lâm<br><span>Địa chỉ: TX. Sơn Tây</span><br><button>Đặt ngay</button></div></div>
+    <div class="card" data-quan-huyen="Ba Vì"><img src="https://cdn.justfly.vn/400x300/media/202309/18/1695011614-justfly-khu-du-lich-dam-long-ba-vi-ha-noi-2.jpg"><div class="info">Đầm Long<br><span>Địa chỉ: H. Ba Vì</span><br><button>Đặt ngay</button></div></div>
+    <div class="card" data-quan-huyen="Mỹ Đức"><img src="https://booking.muongthanh.com/upload_images/images/H%60/chua-thien-tru.jpg"><div class="info">Chùa Hương<br><span>Địa chỉ: H. Mỹ Đức</span><br><button>Đặt ngay</button></div></div>
+    <div class="card" data-quan-huyen="Ba Vì"><img src="https://dulichbavi.com/wp-content/uploads/2019/07/cau-thien-son-suoi-nga-1024x768.jpg"><div class="info">Thiên Sơn Suối Ngà<br><span>Địa chỉ: H. Ba Vì</span><br><button>Đặt ngay</button></div></div>
   </div>
 </section>
 
-
 <footer class="site-footer">
   <div class="container">
+    <div class="footer-subscribe">
+      <label for="footer-email" class="subscribe-label">Nhập email để nhận thông tin mới nhất:</label>
+      <form class="subscribe-form" action="#"> 
+        <input type="email" id="footer-email" class="subscribe-input" placeholder="Nhập email của bạn..." required>
+        <button type="submit" class="subscribe-button">Gửi</button>
+      </form>
+    </div>
 
-      <div class="footer-subscribe">
-          <label for="footer-email" class="subscribe-label">Nhập email để nhận thông tin mới nhất:</label>
-          <form class="subscribe-form" action="#"> <input type="email" id="footer-email" class="subscribe-input" placeholder="Nhập email của bạn..." required>
-              <button type="submit" class="subscribe-button">Gửi</button>
-          </form>
+    <div class="footer-main">
+      <div class="footer-column footer-links">
+        <h4>Web</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="#">Dịch vụ</a></li>
+          <li><a href="/am_thuc/amthucmainpage.htm">Ẩm thực Hà Nội</a></li>
+          <li><a href="#">Điểm đến nổi bật</a></li>
+          <li><a href="#">Đặt chuyến du lịch - tham quan</a></li>
+        </ul>
       </div>
-
-      <div class="footer-main">
-          <div class="footer-column footer-links">
-              <h4>Web</h4>
-              <ul>
-                  <li><a href="index.html">Trang chủ</a></li>
-                  <li><a href="#">Dịch vụ</a></li>
-                  <li><a href="/am_thuc/amthucmainpage.htm">Ẩm thực Hà Nội</a></li>
-                  <li><a href="#">Điểm đến nổi bật</a></li>
-                  <li><a href="#">Đặt chuyến du lịch - tham quan</a></li>
-              </ul>
-          </div>
-
-          <div class="footer-column footer-social">
-              <h4>Liên hệ với chúng tôi qua:</h4>
-              <ul>
-                  <li><a href="#"><i class="fab fa-facebook-f social-icon"></i> Facebook</a></li>
-                  <li><a href="#"><i class="fab fa-youtube social-icon"></i> Youtube</a></li>
-                  <li><a href="#"><i class="fab fa-tiktok social-icon"></i> Tiktok</a></li>
-                  <li><a href="#"><i class="fa-brands fa-rocketchat social-icon"></i> Zalo</a></li> <li><a href="#"><i class="fab fa-instagram social-icon"></i> Instagram</a></li>
-              </ul>
-          </div>
-
-          <div class="footer-column footer-extra">
-               <div class="dmca-badge">
-                   <a href="//www.dmca.com/Protection/Status.aspx?ID=YOUR-DMCA-ID" title="DMCA.com Protection Status" class="dmca-badge">
-                      <img src="public/image/dmca-badge.png" alt="DMCA.com Protection Status" />
-                   </a>
-                   <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
-               </div>
-          </div>
-      </div> <div class="footer-bottom">
-          <hr class="footer-divider">
-          <p>&copy; <span id="current-year"></span> Vietnam VNM Travel. All rights reserved.</p>
+      <div class="footer-column footer-social">
+        <h4>Liên hệ với chúng tôi qua:</h4>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f social-icon"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-youtube social-icon"></i> Youtube</a></li>
+          <li><a href="#"><i class="fab fa-tiktok social-icon"></i> Tiktok</a></li>
+          <li><a href="#"><i class="fa-brands fa-rocketchat social-icon"></i> Zalo</a></li>
+          <li><a href="#"><i class="fab fa-instagram social-icon"></i> Instagram</a></li>
+        </ul>
       </div>
-
+      <div class="footer-column footer-extra">
+        <div class="dmca-badge">
+          <a href="//www.dmca.com/Protection/Status.aspx?ID=YOUR-DMCA-ID" title="DMCA.com Protection Status" class="dmca-badge">
+            <img src="public/image/dmca-badge.png" alt="DMCA.com Protection Status" />
+          </a>
+          <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <hr class="footer-divider">
+      <p>&copy; <span id="current-year"></span> Vietnam VNM Travel. All rights reserved.</p>
+    </div>
   </div>
+</footer>
+
+<!-- Slider -->
 <script>
   let current = 0;
   function showSlide(index) {
@@ -162,6 +171,25 @@
   function nextSlide() { showSlide(current + 1); }
   function prevSlide() { showSlide(current - 1); }
   setInterval(nextSlide, 5000);
+</script>
+
+<!-- Tìm kiếm địa điểm -->
+<script>
+  document.querySelector('.search-bar button').addEventListener('click', function () {
+    const keyword = document.getElementById('keyword').value.toLowerCase();
+    const selectedDistrict = document.getElementById('district-select').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+      const title = card.querySelector('.info').textContent.toLowerCase();
+      const district = (card.getAttribute('data-quan-huyen') || "").toLowerCase();
+
+      const matchKeyword = keyword === "" || title.includes(keyword);
+      const matchDistrict = selectedDistrict === "" || district === selectedDistrict;
+
+      card.style.display = (matchKeyword && matchDistrict) ? 'block' : 'none';
+    });
+  });
 </script>
 
 </body>

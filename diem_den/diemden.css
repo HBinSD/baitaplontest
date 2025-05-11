@@ -6,122 +6,12 @@ body { margin: 0; background: #f0f2f5; }
   --font-size-h2: 24px;
 }
 
-.main-header {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 12px 30px;
-background-color: #fff;
-font-family: 'Segoe UI', sans-serif;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.left-section a {
-font-weight: bold;
-color: #000;
-text-decoration: none;
-margin-right: 20px;
-white-space: nowrap;
-transition: color 0.3s ease, transform 0.2s ease;
-cursor: pointer;  
-display: inline-block;
-}
-.left-section a:hover {
-color: #007bff;
-transform: translateY(-2px);
-}
-
-.nav-links {
-display: flex;
-align-items: center;
-gap: 20px;
-}
-
-.nav-links a {
-text-decoration: none;
-color: #000;
-font-weight: 500;
-font-size: 14px;
-transition: color 0.3s ease, transform 0.2s ease;
-cursor: pointer;  
-display: inline-block;
-}
-.nav-links a:hover {
-color: #007bff;
-transform: translateY(-2px);
-}
-
-.nav-links i {
-font-size: 16px;
-transition: color 0.3s ease, transform 0.2s ease;
-cursor: pointer;  
-display: inline-block;
-}
-.nav-links i:hover {
-color: #007bff;
-transform: scale(1.1) translateY(-1px);
-}
-
-.nav-scroll-item {
-cursor: pointer;
-display: inline-block;
-transition: color 0.3s ease;
-}
-
-.nav-scroll-item:hover {
-color: #007bff; 
-}
-
-/* login res */
-.nav-links ul {
-position: relative;
-display: inline-block;
-padding: 0;
-margin: 0;
-z-index: 2;
-}
-
-.res-log-main {
-display: block;
-position: absolute;
-background-color: #f9f9f9;
-min-width: 160px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 5;
-right: -30px;
-}
-
-.res-log-main a {
-color: black;
-padding: 12px 16px;
-text-decoration: none;
-display: none;
-cursor: pointer;
-}
-
-.nav-links ul:hover > .res-log-main a{
-display: block;
-}
-
-
-@media (max-width: 768px) {
-.left-section {
-    font-size: 10px;
-    margin-left: -12px;
-}
-
-.nav-links a, .nav-links i{
-    font-size: 10px;
-    gap: -5px;
-}
-
-}
 
 /* --- Ảnh nền có thanh tìm kiếm --- */
 .hero-search {
   position: relative;
-  background: url('https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/07/anh-ho-guom.jpg') no-repeat center center/cover;
-  height: 80vh; /* Điều chỉnh chiều cao của ảnh đầu trang */
+  background: url('anhmain.jpg') no-repeat center center/cover;
+  height: 480px; /* Điều chỉnh chiều cao của ảnh đầu trang */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,7 +48,7 @@ display: block;
 .slider-container {
   position: relative;
   width: 100%;
-  max-height: 720px; /* Điều chỉnh chiều cao cho vừa khung */
+  max-height: 700px; /* Điều chỉnh chiều cao cho vừa khung */
   overflow: hidden;
   background: #000;
   margin-top: 30px;
@@ -168,11 +58,10 @@ display: block;
   display: flex;
   width: 300%;
   transition: transform 0.6s ease-in-out;
-  max-height: 100%;
 }
 
 .slide {
-  width: 100%;
+  width: 100vw;
   height: 100%; /* Đảm bảo ảnh không vượt quá chiều cao của slider */
   position: relative;
   max-width: 100%;
@@ -181,12 +70,12 @@ display: block;
 .slide img {
   width: 100%;
   height: 100%; /* Đảm bảo ảnh chiếm đầy khung */
-  object-fit: contain;
+  object-fit: cover; /* Cắt ảnh hợp lý để không bị kéo dãn */
 }
 
 .slide-text {
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -207,6 +96,7 @@ display: block;
   z-index: 10;
   padding: 10px;
 }
+
 
 .slider-btn.left { left: 10px; }
 .slider-btn.right { right: 10px; }
@@ -240,9 +130,6 @@ h2 {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: transform 0.3s ease;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 .card:hover {
@@ -269,10 +156,7 @@ h2 {
   cursor: pointer;
 }
 
-@media screen and (max-width: 728px){
-  .hero-search {
-    height: 320px;
-  }
+@media screen and (max-width: 728px) {
   .card-grid {
     grid-template-columns: repeat(1, 1fr);
   }
