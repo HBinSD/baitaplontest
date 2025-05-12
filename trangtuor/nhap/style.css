@@ -1,0 +1,138 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Màu nền trang */
+    color: #333;
+}
+
+header {
+    background-color: #fff; /* Màu nền header */
+    color: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ nhẹ */
+    position: sticky; /* Giữ header cố định khi cuộn trang */
+    top: 0;
+    z-index: 100; /* Đảm bảo header luôn ở trên các phần khác */
+}
+
+.logo-container img {
+    height: 50px; /* Điều chỉnh kích thước logo */
+    background-color: #f8f8f8;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 20px;
+}
+
+.main-nav li:first-child {
+    margin-left: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #DAA520; /* Màu khi hover */
+}
+
+main {
+    padding: 20px;
+}
+
+.hero-section {
+    background-image: url('hanoi-background.jpg'); /* Thay bằng ảnh nền Hà Nội của bạn */
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 20px;
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #DAA520;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b8860b;
+}
+
+.featured-destinations {
+    margin-bottom: 30px;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.destination-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.destination-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.destination-item h3 {
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+.destination-item a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #eee;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.destination-item a:hover {
+    background-color: #ddd;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
