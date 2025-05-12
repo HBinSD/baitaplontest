@@ -6,9 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="button-back">
+        <button onclick="history.back()">◀️ Quay Lại</button>
+    </div>
+
     <div class="hotel-item">
         <img class="hotel-img" src="https://hiwinvietnam.vn/wp-content/uploads/2023/04/nha-khach-la-thanh-3.jpg" alt="Khách sạn A">
-        <h3>Khách sạn A</h3>
+        <h3>Khách sạn La Thành</h3>
         <p class="hotel-price">Giá từ: <span class="price">500.000 VNĐ/đêm</span></p>
         <button class="button view-details-button" data-hotel-id="1">Xem chi tiết</button>
         
@@ -75,12 +79,12 @@
         }
     
         .button.primary {
-            background-color: #28a745;
+            background-color: #0077FF;
             text-decoration: none;
         }
     
         .button.primary:hover {
-            background-color: #1e7e34;
+            background-color: #0077FF;
         }
     
         .hotel-details-expanded {

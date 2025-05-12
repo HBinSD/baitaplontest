@@ -134,3 +134,54 @@
     }
 
 }
+
+    .hamburger {
+        display: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: #000;
+    }
+
+    @media (max-width: 728px) {
+        .hamburger {
+            display: block;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: white;
+            width: 100%;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links a, .nav-links ul {
+            font-size: 14px;
+        }
+
+        .res-log-main {
+            position: static;
+            box-shadow: none;
+            background-color: transparent;
+        }
+
+        .res-log-main a {
+            display: block !important;
+        }
+
+        .nav-links ul:hover > .res-log-main a {
+            display: block;
+        }
+
+        ul {
+            text-align: center;
+        }
+    }

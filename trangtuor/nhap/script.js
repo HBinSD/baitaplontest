@@ -22,3 +22,8 @@ window.addEventListener('scroll', () => {
 });
 
 // Hoặc các hiệu ứng khác cho menu (ví dụ: menu dropdown khi hover, menu mobile)
+
+      function toggleMobileMenu() {
+      const nav = document.querySelector('.nav-links');
+      nav.classList.toggle('active');
+  }

@@ -3,10 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Chi tiết Tour Hà Nội - WDGN</title>
     <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" href="../../header.css">
 </head>
 <body>
+          <header class="main-header">
+    <div class="left-section">
+      <a href="../../index.html"><img src="../../logo.jpg" alt=""></a>
+    </div>
+
+        <div class="hamburger" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+ 
+    <nav class="nav-links">
+            <a class="nav-scroll-item" href="../../index.html">Home</a>
+            <a class="nav-scroll-item" href="../../diem_den/diemden.html">Điểm đến</a>
+            <a class="nav-scroll-item" href="../../am_thuc/amthucmainpage.htm">Ẩm thực</a>
+            <a class="nav-scroll-item" href="../../trangtuor/index.html">Đặt Tour</a>
+
+            
+            <ul><i class="fa fa-question" aria-hidden="true"></i>
+                <div class="res-log-main">
+                    <a href="../../gioithieu_hoidap_hotro/gioithieu.html">Giới Thiệu</a>
+                    <a href="../../gioithieu_hoidap_hotro/hoidap.html">Hỏi Đáp</a>
+                    <a href="#">Hỗ Trợ</a>
+                </div>
+            </ul>
+
+            <a href="#"><i class="fas fa-search"></i></a>
+            <ul><i class="fas fa-user"></i>
+                <div class="res-log-main">
+                    <a href="../../res_log/dangki.htm">Đăng kí</a>
+                    <a href="../../res_log/dangnhap.htm">Đăng nhập</a>
+                </div>
+            </ul>
+    </nav>
+</header>
+
     <div class="tour-detail-container">
         <header class="tour-header">
             <h1 class="tour-title">Hà Nội về đêm - Ẩm thực và Văn hóa</h1>
@@ -89,9 +125,10 @@
             <div class="detail-section booking">
                 <h2>Đặt tour ngay</h2>
                 <p class="tour-price">Giá tour: <span class="price highlight">400.000 VNĐ/người</span></p>
-                <button class="button call-to-action">Đặt tour</button>
+                <a href="../../checkout/checkout.html" class="button call-to-action">Đặt tour</a>
             </div>
         </section>
     </div>
+            <script src="script.js"></script>
 </body>
 </html>

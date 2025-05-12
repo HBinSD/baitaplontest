@@ -13,7 +13,10 @@
         <div class="left-section">
             <a href="../../index.html"><img src="../../logo.jpg" alt=""></a>
         </div>
-        <div class="divider"></div>
+                <div class="hamburger" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+     
         <nav class="nav-links">
             <a class="nav-scroll-item" href="../../index.html">Home</a>
             <a class="nav-scroll-item" href="../../diem_den/diemden.html">Điểm đến</a>
@@ -146,5 +149,12 @@ luôn luôn trong tình trạng phải xếp hàng. Người ăn kem chật cứ
         </div>
 
 </div>
+
+<script>
+      function toggleMobileMenu() {
+      const nav = document.querySelector('.nav-links');
+      nav.classList.toggle('active');
+  }
+</script>
 </body>
 </html>

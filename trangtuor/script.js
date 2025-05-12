@@ -9,3 +9,8 @@ document.querySelector('.search-button button').addEventListener('click', functi
       cards.style.display = (matchKeyword) ? 'block' : 'none';
     });
   });
+
+  function toggleMobileMenu() {
+  const nav = document.querySelector('.nav-links');
+  nav.classList.toggle('active');
+    }

@@ -9,7 +9,7 @@ body {
 /* === Hero Content === */
 
 .hero {
-    background: url('/am_thuc/amthucpic/amthuc_main.png') no-repeat center center/cover;
+    background: url('amthucpic/amthuc_main.png') no-repeat center center/cover;
     color: white;
     position: relative;
     display: flex;
